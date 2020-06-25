@@ -6,11 +6,18 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "autoprefixer": "^9.8.4",
+    "postcss-cli": "^7.1.1",
+    "postcss-import": "^12.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "tailwindcss": "^1.4.6"
   },
   "scripts": {
+    "build:tailwind": "postcss src/index.css -o src/index.prod.css",
+    "watch:tailwind": "postcss -w src/index.css -o src/index.prod.css &",
+
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
