@@ -1,6 +1,27 @@
+:root{
+    --gradient-primary: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .gradient {
-    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    background: var(--gradient-primary);
+}
+
+.text-custom {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.border-gradient {
+    border: solid 3px transparent;
+    background: var(--gradient-primary);
+    background-origin: border-box;
+    box-shadow: 2px 1000px 1px #fff inset;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
 }

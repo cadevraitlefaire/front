@@ -7,17 +7,21 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "autoprefixer": "^9.8.4",
+    "axios": "^0.19.2",
+    "jwt-decode": "^2.2.0",
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-feather": "^2.0.8",
+    "react-icons": "^3.10.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "tailwindcss": "^1.4.6"
   },
   "scripts": {
-    "build:tailwind": "postcss src/index.css -o src/index.prod.css",
-    "watch:tailwind": "postcss -w src/index.css -o src/index.prod.css &",
-
+    "build:tailwind": "postcss src/index.css -o src/index.prod.css --env production",
+    "watch:tailwind": "postcss -w src/index.css -o src/index.prod.css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -37,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0"
   }
 }

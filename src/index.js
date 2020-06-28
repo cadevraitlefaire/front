@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './index.prod.css';
-import App from './App';
+import { BrowserRouter, create, Switch, Route, useLocation } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+import { routes } from './routes';
+import { UserProvider } from './contexts/UserContext';
+
+const ScrollToTop = ({children}) => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname]);
+
+  return children
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <UserProvider>
+      <BrowserRouter>
+        <ScrollToTop>
+          <Switch>
+            {
+              routes.map((route, key) => <Route key={key} {...route}/>)
+            }
+          </Switch>
+        </ScrollToTop>
+      </BrowserRouter>
+    </UserProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
