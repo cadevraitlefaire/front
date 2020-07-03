@@ -1,20 +1,21 @@
-import { Login } from '../components/pages';
-import { Home } from '../components/pages/Home';
+import { Home, Login, Search } from '../components/pages';
 
-export const BUTTON_LINK = 'button';
-
-export const linkedNavbarRoutes = [];
+export const indexedNavbarRoutes = [
+  {
+    component: Search,
+    path: '/search',
+    label: 'Recherche',
+  },
+];
 
 export const navbarRoutes = [
-  ...linkedNavbarRoutes,
+  ...indexedNavbarRoutes,
   {
     component: Login,
     path: '/login',
-    linkType: BUTTON_LINK,
-    type: BUTTON_LINK
   },
   {
     component: Home,
-    path: '/'
+    path: '/',
   },
 ];

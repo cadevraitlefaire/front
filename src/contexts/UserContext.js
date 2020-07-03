@@ -1,5 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 import { Token } from '../helpers';
+import { Username } from '../helpers/Username';
 
 export const UPDATE_CLIENT = 'UPDATE_CLIENT';
 export const LOGOUT = 'LOGOUT';
@@ -13,6 +14,7 @@ function reducer(state, { payload, type }) {
   switch (type) {
     case UPDATE_CLIENT: {
       new Token().set(payload || '');
+      new Username().set();
       return {
         ...state,
         isLogged: true,
@@ -20,6 +22,8 @@ function reducer(state, { payload, type }) {
       };
     }
     case LOGOUT: {
+      new Token().delete();
+      new Username().delete();
       return {
         ...state,
         isLogged: false,

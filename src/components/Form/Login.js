@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { RiLock2Line } from 'react-icons/ri';
 import { User } from '../../actions/User';
-import { Token } from '../../Helpers/Token';
 import { UPDATE_CLIENT, UserContext } from '../../contexts/UserContext';
 
 const fields = [
   {
-    label: 'Email',
-    type: 'email',
+    label: 'Username',
   },
   {
     label: 'Password',
@@ -60,9 +58,9 @@ export const Login = () => {
           </div>
 
           <div className="flex justify-between p-8 text-sm border-t border-gray-300 bg-gray-100">
-            <a href="#" className="font-medium text-indigo-500">Create account</a>
+            <a href="/" className="font-medium text-indigo-500">Create account</a>
 
-            <a href="#" className="text-gray-600">Forgot password?</a>
+            <a href="/" className="text-gray-600">Forgot password?</a>
           </div>
         </div>
       </div>

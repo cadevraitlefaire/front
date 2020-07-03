@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './index.prod.css';
-import { BrowserRouter, create, Switch, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, useLocation } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import { routes } from './routes';
 import { UserProvider } from './contexts/UserContext';

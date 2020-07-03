@@ -5,7 +5,7 @@ import { Wave } from '../SVG/Wave';
 import { ReverseWave } from '../SVG/ReverseWave';
 
 export const Home = () => (
-  <Layout>
+  <Layout bgGradient>
     <div className="pt-24">
 
       <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
